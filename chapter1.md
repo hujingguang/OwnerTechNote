@@ -73,5 +73,5 @@
 
 ###### d. Install phpldapadmin
 
-
+         wget wget http://cn2.php.net/distributions/php-5.4.40.tar.gz
 
