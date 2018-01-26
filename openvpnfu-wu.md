@@ -42,22 +42,13 @@
 
 ```
         wget https://github.com/OpenVPN/easy-rsa/archive/2.2.2.tar.gz   #下载公私密钥生成工具
-
         tar -zxvf 2.2.2.tar.gz && cd  ./easy-rsa-2.2.2/easy-rsa/2.0
-
         source vars && ./clear-all 
-
         ./build-dh         # 生成dh 密钥交换字符串
-
         ./build-ca         #生成根证书文件 ，Common Name项需填写,其他直接回车
-
         ./pkitool --server server  #生成服务器证书文件。
-
         ./pkitool client         #生成客户端证书文件
-
-
         iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
-
         echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf && sysctl -p
 
 
@@ -85,7 +76,7 @@
               explicit-exit-notify 1
 
         vim   client.ovpn     #客户端配置
-        
+
               client
               dev tun
               proto udp
