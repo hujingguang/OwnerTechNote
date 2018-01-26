@@ -33,7 +33,7 @@
 ###### Install
 
 ```
-     root@host \]\#    yum install openvpn -y
+     root@host ]#    yum install openvpn -y
 ```
 
 ###### 
