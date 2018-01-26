@@ -7,6 +7,7 @@
 * [Ansible使用](ansibleshi-yong.md)
 * [OpenVPN服务](openvpnfu-wu.md)
 * [Samba服务](sambafu-wu.md)
+* Test
 
 ## Python
 
