@@ -76,13 +76,13 @@
               push "redirect-gateway def1 bypass-dhcp"
               push "dhcp-option DNS 114.114.114.114"
               keepalive 10 120
-cipher AES-256-CBC
-persist-key
-persist-tun
-status /tmp/openvpn-status.log
-log         /tmp/openvpn.log
-verb 3
-explicit-exit-notify 1
+              cipher AES-256-CBC
+              persist-key
+              persist-tun
+              status /tmp/openvpn-status.log
+              log         /tmp/openvpn.log
+              verb 3
+              explicit-exit-notify 1
 ```
 
 
