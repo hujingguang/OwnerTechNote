@@ -20,12 +20,18 @@
 
 ```
   pip install ansible
+
+
+  Ansible默认配置文件：  /etc/ansible/ansible.cfg 
   
+  vim  /etc/ansible/ansible.cfg
   
-  Ansible默认配置文件：  /etc/ansible/ansible.cfg
+      [defaults] 
+        host_key_checking=False
+        roles_path = /etc/ansible/roles
+        log_path = /tmp/ansible.log
+
 ```
-
-
 
 
 
