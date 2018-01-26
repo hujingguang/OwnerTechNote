@@ -63,9 +63,12 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
                objectClass: top
                objectClass: person
                sn: jingguang
-               
+
+
          /usr/local/openldap/bin/ldapadd -x -w your_passwod -D 'cn=amdin,dc=hujingguang,dc=com' -H ldap://127.0.0.1 -f init.ldif  #执行初始化
 ```
 
+###### d. Install phpldapadmin
 
+            
 
