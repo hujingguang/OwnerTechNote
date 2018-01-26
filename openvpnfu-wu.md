@@ -54,9 +54,11 @@
         ./pkitool --server server  #生成服务器证书文件。
 
         ./pkitool client         #生成客户端证书文件
-        
-        
+
+
         iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
+        
+        echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf && sysctl -p
 ```
 
 
