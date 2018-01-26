@@ -46,22 +46,22 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
          /usr/local/openldap/sbin/ldaptest -F /usr/local/openldap/etc/openldap -f /usr/local/openldap/etc/openldap/sldap.conf   #生成 cn=config目录及动态文件，如不执行则无法启动服务！
 
          /usr/local/openldap/libexec/sldapd -F /usr/local/openldap/etc  #启动服务
-         
-         
-         vim /usr/local/openldap/init.ldif   #初始化根域,保存
-         
-               dn: dc=hujingguang,dc=com
-		dc: hujingguang
-		objectClass: top
-		objectClass: dcObject
-		objectClass: organization
-		o: laidian
 
-		dn: cn=admin,dc=hujingguang,dc=com
-		cn: admin
-		cn: hu jing guang
-		objectClass: top
-		objectClass: person
+
+         vim /usr/local/openldap/init.ldif   #初始化根域,保存
+
+               dn: dc=hujingguang,dc=com
+               dc: hujingguang
+               objectClass: top
+               objectClass: dcObject
+               objectClass: organization
+               o: laidian
+
+               dn: cn=admin,dc=hujingguang,dc=com
+               cn: admin
+               cn: hu jing guang
+               objectClass: top
+                objectClass: person
                 sn: jingguang
 ```
 
