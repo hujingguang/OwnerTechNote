@@ -9,7 +9,7 @@
 >  
 >  中文文档：  http://www.ansible.com.cn/
 >  
->  
+>  参考文档：  http://www.mamicode.com/info-detail-1424482.html
 > ```
 
 ##### 
@@ -20,7 +20,12 @@
 
 ```
   pip install ansible
+  
+  
+  Ansible默认配置文件：  /etc/ansible/ansible.cfg
 ```
+
+
 
 
 
