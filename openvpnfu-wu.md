@@ -96,8 +96,12 @@
   修改客户端配置
       ;cert client1.crt    
       ;key  client1.key  
-      auth-user-pass  
+      auth-user-pass
 ```
 
+###### 
 
+###### 注意问题
+
+       可以连接到vpn 服务器，但是无法连接外网 ，解决方案：
 
