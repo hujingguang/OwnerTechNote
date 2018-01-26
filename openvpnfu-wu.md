@@ -61,7 +61,7 @@
         echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf && sysctl -p
 
 
-        vim   /etc/openvpn/openvpn.conf
+        vim   /etc/openvpn/openvpn.conf  #服务器端配置
 
               local 192.168.10.238
               port 1194
@@ -83,6 +83,22 @@
               log         /tmp/openvpn.log
               verb 3
               explicit-exit-notify 1
+
+        vim   client.ovpn     #客户端配置
+        
+              client
+              dev tun
+              proto udp
+              remote 192.168.10.238 1194 
+              resolv-retry infinite
+              nobind
+              persist-key
+              persist-tun
+              ca ca.crt 
+              cert client1.crt
+              key client1.key
+              comp-lzo
+              verb 3
 ```
 
 
