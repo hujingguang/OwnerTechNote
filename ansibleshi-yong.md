@@ -42,8 +42,8 @@
     no_log:True
 
   变量配置目录：   /etc/ansible/group_vars,  /etc/ansible/host_vars
-  
-  
+
+
   roles目录结构：
 
      /etc/ansible/roles/tasks
@@ -59,5 +59,9 @@
      /etc/ansible/roles/handlers
 ```
 
+##### 
 
+##### 注意事项
+
+       roles目录下每个模块的Yml文件必须以main 命名. 格式为yml格式\(以---开头\), 变量应用如果 以{ 开头要用引号引起
 
