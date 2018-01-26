@@ -75,12 +75,24 @@
 
 ```
      wget  http://cn2.php.net/distributions/php-5.4.40.tar.gz  #注意版本 为5.4 ！ 
-     
+
      tar -zxvf php-5.4.40.tar.gz && cd php-5.4.40 
-     
+
      ./configure --prefix=/usr/local/php  --with-openssl --with-gettext --enable-fpm --with-mysql --with-mysqli --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=shared --enable-xml --with-curl --with-mhash --with-mcrypt --with-gd --enable-gd-native-ttf --with-xsl --with-ldap --with-ldap-sasl --with-xmlrpc --without-pear --enable-zip --enable-soap --enable-mbstring --enable-ftp --enable-sockets --enable-pcntl --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --disable-rpath --enable-mbregex --with-xmlrpc --enable-wddx --enable-ftp --with-ldap=/usr/local/openldap
-     
+
      make  && make install
+     
+     下载phpldapadmin包  地址  https://pan.baidu.com/s/1eTh1fJO 
+     
+     解压编辑 config 目录下config.php
+     
+       vim  config.php
+       
+         $servers->setValue('server','host','127.0.0.1');
+         
+         $servers->setValue('server','base',array('dc=imlaidian,dc=com'));
+         
+         $servers->setValue('login','bind_id','cn=admin,dc=imlaidian,dc=com');
 ```
 
 
