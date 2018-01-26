@@ -42,6 +42,8 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
                suffix        "dc=hujingguang,dc=com"
                rootdn        "cn=admin,dc=hujingguang,dc=com"        #此处修改成自己的DN
                rootpw        {SSHA}BT48KryUWpPyIDIw8KEDgxsVCuVL4WbF  # 此处填写生成的密码
+               
+         /usr/local/openldap/sbin/ldaptest -F /usr/local/openldap/etc/openldap -f /usr/local/openldap/etc/openldap/sldap.conf   #生成 cn=config目录及动态文件，如不执行则无法启动服务！
 ```
 
 
