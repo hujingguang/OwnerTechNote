@@ -23,14 +23,23 @@
 
 
   Ansible默认配置文件：  /etc/ansible/ansible.cfg 
-  
+
   vim  /etc/ansible/ansible.cfg
-  
+
       [defaults] 
+        inventory      = /etc/ansible/hosts
         host_key_checking=False
         roles_path = /etc/ansible/roles
         log_path = /tmp/ansible.log
-
+        sudo_user=root
+	remote_port=22
+	host_key_checking=False
+	remote_user=root
+	module_name=command
+	private_key_file=/root/.ssh/id_rsa
+	no_log:True
+        
+  变量配置目录：   /etc/ansible/group_vars,  /etc/ansible/host_vars   
 ```
 
 
