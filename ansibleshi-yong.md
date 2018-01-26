@@ -59,7 +59,15 @@
      /etc/ansible/roles/handlers
 ```
 
-##### 
+
+
+目录结构如图
+
+  ![](/assets/ansible.png)
+
+
+
+
 
 ##### 注意事项
 
