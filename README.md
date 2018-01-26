@@ -2,7 +2,7 @@ Name:  Hujingguang
 
 Email:  hujingguangsa@gmail.com
 
-Location:  Shenzhen China
+Location:  Shenzhen, CN
 
-Github:  http://github.com/hujingguang
+Github:  [http://github.com/hujingguang](http://github.com/hujingguang)
 
