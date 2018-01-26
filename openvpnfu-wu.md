@@ -83,16 +83,20 @@
               key client1.key
               comp-lzo
               verb 3
-              
-              
+
+
    修改Openvpn使用密码进行认证,并调用外部脚本读取用户名密码返回值认证，编辑openvpn.conf文件 
-    
+
      auth-user-pass-verrify  /root/check_passwd.py via-env   #通过脚本验证用户名密码，返回码为0则成功，否则失败，via-env的意思为通过环境变量将用户名密码传递给脚本
      client-cert-not-required    #表示客户端不使用密钥验证，去掉则需要密码和密钥！
      username-as-common-name    #登陆用户名作为普通用户名传递
      script-security 3 execve  # 脚本安全级别，数字越低则表示越严格，3表示可以调用用户的脚本进行验证，并且可以传递用户名参数，execve表示通过调用脚本传递 2.3以上默认都用execve,可以不显式配置
-   
-      
+
+
+  修改客户端配置
+      ;cert client1.crt    
+      ;key  client1.key  
+      auth-user-pass  
 ```
 
 
