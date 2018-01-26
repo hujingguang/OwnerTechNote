@@ -32,5 +32,12 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
 
 ###### c. Configure OpenLDAP
 
-             /usr/local/openldap/sbin/ldappasswd   \# 执行会生成密码 
+```
+         /usr/local/openldap/sbin/ldappasswd   \# 执行会生成密码 
+         
+         vim  /usr/local/openldap/etc/sldap.conf 
+         
+```
+
+
 
