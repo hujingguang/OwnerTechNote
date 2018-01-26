@@ -5,7 +5,7 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
 1. ##### OpenLDAP安装
 
    ```
-       a.  安装BDB
+       a.  Install  BDB
 
             yum install glibc-headers gcc-c++ -y    \#安装gcc编译器
 
