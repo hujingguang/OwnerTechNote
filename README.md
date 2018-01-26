@@ -6,7 +6,5 @@ Location:  Shenzhen, CN
 
 Github:  [http://github.com/hujingguang](http://github.com/hujingguang)
 
-Introduction
-
-Helloworld
+Introduction:   Fitness enthusiasts ,Runner  and Linux SA ,
 
