@@ -61,8 +61,8 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
                cn: admin
                cn: hu jing guang
                objectClass: top
-                objectClass: person
-                sn: jingguang
+               objectClass: person
+               sn: jingguang
 ```
 
 
