@@ -32,6 +32,8 @@
         ./build-ca         #生成根证书文件 ，Common Name项需填写,其他直接回车
 
         ./pkitool --server server  #生成服务器证书文件。
+        
+        ./pkitool client         #生成客户端证书文件
 ```
 
 
