@@ -112,3 +112,5 @@ vim  /etc/samba/smb.d/%U.smb.conf
 
 
 
+Github Address: https://github.com/hujingguang/tech\_note
+
