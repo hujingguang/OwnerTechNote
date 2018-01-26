@@ -57,8 +57,32 @@
 
 
         iptables -t nat -A POSTROUTING -s 10.8.0.0/24 -o eth0 -j MASQUERADE
-        
+
         echo 'net.ipv4.ip_forward=1' >> /etc/sysctl.conf && sysctl -p
+        
+        
+        vim   /etc/openvpn/openvpn.conf
+        
+              local 192.168.10.238
+              port 1194
+              proto udp
+dev tun
+ca /etc/openvpn/ca.crt
+cert /etc/openvpn/server1.crt
+key /etc/openvpn/server1.key  # This file should be kept secret
+dh /etc/openvpn/dh2048.pem
+server 10.8.0.0 255.255.255.0
+ifconfig-pool-persist /etc/openvpn/ipp.txt
+push "redirect-gateway def1 bypass-dhcp"
+push "dhcp-option DNS 114.114.114.114"
+keepalive 10 120
+cipher AES-256-CBC
+persist-key
+persist-tun
+status /tmp/openvpn-status.log
+log         /tmp/openvpn.log
+verb 3
+explicit-exit-notify 1
 ```
 
 
