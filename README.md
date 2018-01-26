@@ -1,6 +1,30 @@
-# TechNote
 
- 一些技术知识的总结
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                                       ![](/assets/N_5U~5QFBJT{Q$[69GWVVVC.png)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
