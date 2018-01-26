@@ -1,3 +1,6 @@
-# My Awesome Book
+# TechNote
 
-This file file serves as your book's preface, a great place to describe your book's content and ideas.
+ 一些技术知识的总结
+
+
+
