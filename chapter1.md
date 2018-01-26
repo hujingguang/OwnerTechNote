@@ -12,13 +12,13 @@
 ```
      yum install glibc-headers gcc-c++ -y    \#安装gcc编译器
 
-     wget  http://download.oracle.com/berkeley-db/db-5.2.42.tar.gz \#获取BDB 源码包
+     wget  http://download.oracle.com/berkeley-db/db-5.1.29.tar.gz \#获取BDB 源码包
 
-     tar -zxvf db-5.2.42.tar.gz && cd db-5.2.42
+     tar -zxvf db-5.1.29.tar.gz && cd db-5.1.29
 
-     ../dist/configure --prefix=/usr/local/bdb5.2 --enable-compat185 --enable-dbm --enable-cxx 
+     ../dist/configure --prefix=/usr/local/bdb5.1 --enable-compat185 --enable-dbm --enable-cxx 
 
-     make && make  docdir=/usr/share/doc/db-5.2  install
+     make && make  docdir=/usr/share/doc/db-5.1  install
 ```
 
 ###### b. Install OpenLDAP
@@ -28,7 +28,7 @@
 
      tar -zxvf openldap-2.4.45.tgz &&  cd openldap-2.4.45
 
-     ./configure --prefix=/usr/local/openladp  CPPFLAGS="-I/usr/local/bdb5.2/include" LDFLAGS="-L/usr/local/bdb5.2/lib -Wl,-rpath,/usr/local/bdb5.2/lib"
+     ./configure --prefix=/usr/local/openladp  CPPFLAGS="-I/usr/local/bdb5.1/include" LDFLAGS="-L/usr/local/bdb5.1/lib -Wl,-rpath,/usr/local/bdb5.1/lib"
 
      make depend && make && make install
 ```
@@ -73,5 +73,15 @@
 
 ###### d. Install phpldapadmin
 
-         wget wget http://cn2.php.net/distributions/php-5.4.40.tar.gz
+```
+     wget  http://cn2.php.net/distributions/php-5.4.40.tar.gz  #注意版本 为5.4 ！ 
+     
+     tar -zxvf php-5.4.40.tar.gz && cd php-5.4.40 
+     
+     ./configure --prefix=/usr/local/php  --with-openssl --with-gettext --enable-fpm --with-mysql --with-mysqli --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=shared --enable-xml --with-curl --with-mhash --with-mcrypt --with-gd --enable-gd-native-ttf --with-xsl --with-ldap --with-ldap-sasl --with-xmlrpc --without-pear --enable-zip --enable-soap --enable-mbstring --enable-ftp --enable-sockets --enable-pcntl --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --disable-rpath --enable-mbregex --with-xmlrpc --enable-wddx --enable-ftp --with-ldap=/usr/local/openldap
+     
+     make  && make install
+```
+
+
 
