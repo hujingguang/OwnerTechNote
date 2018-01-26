@@ -113,11 +113,25 @@
   ./bin/ldapadd -x -w 123123 -D 'cn=admin,dc=wikiki,dc=com' -H ldap://127.0.0.1 -f add_user.ldif   #从一个文件创建entry
 ```
 
-
+##### 
 
 ##### 3. 注意事项
 
-       openldap v2.4.4 只支持 BDB v4.4 ~ v4.8 or v5.0 ~ 5.1
+```
+   openldap v2.4.4 只支持 BDB v4.4 ~ v4.8 or v5.0 ~ 5.1
+   
+   python2.7 安装python-ldap失败解决：  pip install python-ldap=v2.4.4
+   
+     1. ln -s /usr/local/python/include/python2.7/* /usr/include/python2.7/
+     
+     2. ln -s /usr/local/python/lib/*.so /usr/lib64/ && ln -s /usr/local/python/lib/*.so /usr/lib/
+```
+
+
+
+##### 4. 参考文档
+
+        http://www.linuxidc.com/Linux/2016-08/134225.htm
 
 
 
