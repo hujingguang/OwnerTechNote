@@ -36,13 +36,12 @@ Openldap是开源的轻量目录访问协议的实现，基于x.500协议，支�
          /usr/local/openldap/sbin/ldappasswd   \# 执行会生成密码 
 
          vim  /usr/local/openldap/etc/sldap.conf
-         
-               database	mdb
-               maxsize		1073741824
-               suffix		"dc=hujingguang,dc=com"
-               rootdn		"cn=admin,dc=hujingguang,dc=com"        #此处修改成自己的DN
-               rootpw		{SSHA}BT48KryUWpPyIDIw8KEDgxsVCuVL4WbF  # 此处填写生成的密码
 
+               database      mdb
+               maxsize       1073741824
+               suffix        "dc=hujingguang,dc=com"
+               rootdn        "cn=admin,dc=hujingguang,dc=com"        #此处修改成自己的DN
+               rootpw        {SSHA}BT48KryUWpPyIDIw8KEDgxsVCuVL4WbF  # 此处填写生成的密码
 ```
 
 
