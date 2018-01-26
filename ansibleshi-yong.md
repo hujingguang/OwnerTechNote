@@ -34,12 +34,12 @@
         roles_path = /etc/ansible/roles
         log_path = /tmp/ansible.log
         sudo_user=root
-    remote_port=22
-    host_key_checking=False
-    remote_user=root
-    module_name=command
-    private_key_file=/root/.ssh/id_rsa
-    no_log:True
+        remote_port=22
+        host_key_checking=False
+        remote_user=root
+        module_name=command
+        private_key_file=/root/.ssh/id_rsa
+        no_log:False
 
   变量配置目录：   /etc/ansible/group_vars,  /etc/ansible/host_vars
 
@@ -59,15 +59,9 @@
      /etc/ansible/roles/handlers
 ```
 
-
-
 目录结构如图
 
-  ![](/assets/ansible.png)
-
-
-
-
+![](/assets/ansible.png)
 
 ##### 注意事项
 
