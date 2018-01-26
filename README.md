@@ -6,7 +6,7 @@
 >
 > Github:  [http://github.com/hujingguang](http://github.com/hujingguang)
 >
-> Introduction:   Fitness enthusiasts ,Runner  and Linux SA ,
+> Introduction:   Fitness enthusiasts ,Runner  and Linux SA ,Graduated from Agricultural University Of Hunan
 
 
 
