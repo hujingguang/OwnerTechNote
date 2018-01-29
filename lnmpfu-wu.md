@@ -18,6 +18,7 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
 
    ```
         wget http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz
+        tar -zxvf mysql-5.6.38.tar.gz  && cd mysql-5.6.38
    ```
 
 
