@@ -14,6 +14,8 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
    yum install gcc openssl openssl-devel pcre pcre-devel -y  && useradd -M -s /sbin/nologin www
 
    ./configure --prefix=/usr/local/nginx --user=www --group=www --with-file-aio --with-http_ssl_module --with-http_v2_module --with-http_realip_module  --with-http_stub_status_module    --with-pcre
+
+   make && make install 
    ```
 
 
