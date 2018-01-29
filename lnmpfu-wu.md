@@ -15,8 +15,10 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
 
    ./configure --prefix=/usr/local/nginx --user=www --group=www --with-file-aio --with-http_ssl_module --with-http_v2_module --with-http_realip_module  --with-http_stub_status_module    --with-pcre
 
-   make && make install 
+   make && make install   
    ```
 
+2. Mysql安装
 
+            wget http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz
 
