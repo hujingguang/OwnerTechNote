@@ -10,7 +10,7 @@
 
 ## Python
 
-* Tets
+* [Tets](python/tets.md)
 
 ## Mysql
 
