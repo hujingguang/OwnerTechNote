@@ -6,5 +6,11 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
 
 1. Nginx安装
 
-          wget http://nginx.org/download/nginx-1.12.2.tar.gz
+   ```
+      wget http://nginx.org/download/nginx-1.12.2.tar.gz   #获取源码包
+   
+   
+   ```
+
+
 
