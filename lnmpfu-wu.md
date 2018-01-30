@@ -26,7 +26,7 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
         cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DSYSCONFDIR=/usr/local/mysql/my.cnf -DMYSQL_DATADIR=/usr/local/mysql/data -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DENABLED_LOCAL_INFILE=1 -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DEXTRA_CHARSET=utf8 -DWITH_USER=mysql -DWITH_EMBEDDED_SERVER=OFF
         make && make install
         vim /usr/local/mysql/my.cnf   #配置mysql配置文件
-     
+
              innodb_buffer_pool_size = 128M
              basedir = /usr/local/mysql
              datadir = /usr/local/mysql/data
