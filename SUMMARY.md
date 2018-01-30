@@ -15,3 +15,7 @@
 
 ## Mysql
 
+## Doc
+
+* [Jenkins插件](doc/jenkinscha-jian.md)
+
