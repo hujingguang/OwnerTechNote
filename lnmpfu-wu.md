@@ -17,13 +17,13 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
    ```
 
 2. Mysql安装  
-            yum install ncurses-devel zlib-devel perl-DBI perl-DBD-mysql perl-Time-HiRes perl-IO-Socket-SSL perl-Term-ReadKey cmake -y  
-           wget [http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz](http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz)  
-           tar -zxvf mysql-5.6.38.tar.gz  && cd mysql-5.6.38   
-           useradd -M -s /sbin/nologin mysql  
-          cmake -DCMAKE\_INSTALL\_PREFIX=/usr/local/mysql -DSYSCONFDIR=/usr/local/mysql/my.cnf -DMYSQL\_DATADIR=/usr/local/mysql/data -DWITH\_INNOBASE\_STORAGE\_ENGINE=1 -DWITH\_MEMORY\_STORAGE\_ENGINE=1 -DWITH\_MYISAM\_STORAGE\_ENGINE=1 -DWITH\_ARCHIVE\_STORAGE\_ENGINE=1 -DWITH\_READLINE=1 -DENABLED\_LOCAL\_INFILE=1 -DDEFAULT\_CHARSET=utf8 -DDEFAULT\_COLLATION=utf8\_general\_ci -DEXTRA\_CHARSET=utf8 -DWITH\_USER=mysql -DWITH\_EMBEDDED\_SERVER=OFF  
-        make && make install  
-        vim /usr/local/mysql/my.cnf   \#配置mysql配置文件
+                yum install ncurses-devel zlib-devel perl-DBI perl-DBD-mysql perl-Time-HiRes perl-IO-Socket-SSL perl-Term-ReadKey cmake -y  
+                wget [http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz](http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz)  
+                 tar -zxvf mysql-5.6.38.tar.gz  && cd mysql-5.6.38  
+                 useradd -M -s /sbin/nologin mysql  
+                 cmake -DCMAKE\_INSTALL\_PREFIX=/usr/local/mysql -DSYSCONFDIR=/usr/local/mysql/my.cnf -DMYSQL\_DATADIR=/usr/local/mysql/data -DWITH\_INNOBASE\_STORAGE\_ENGINE=1 -DWITH\_MEMORY\_STORAGE\_ENGINE=1 -DWITH\_MYISAM\_STORAGE\_ENGINE=1 -DWITH\_ARCHIVE\_STORAGE\_ENGINE=1 -DWITH\_READLINE=1 -DENABLED\_LOCAL\_INFILE=1 -DDEFAULT\_CHARSET=utf8 -DDEFAULT\_COLLATION=utf8\_general\_ci -DEXTRA\_CHARSET=utf8 -DWITH\_USER=mysql -DWITH\_EMBEDDED\_SERVER=OFF  
+                 make && make install  
+                 vim /usr/local/mysql/my.cnf   \#配置mysql配置文件
 
    ```
          innodb_buffer_pool_size = 128M
@@ -64,7 +64,7 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
     chmod +x /etc/init.d/mysqld 
     mkdir /usr/local/mysql/{var,logs}
     chown -R mysql.mysql /usr/local/mysql
-    cd /usr/local/mysql && ./scripts/mysql_install_db --user=mysql --defaults-file=/usr/local/mysql/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data 
+    cd /usr/local/mysql && ./scripts/mysql_install_db --user=mysql --defaults-file=/usr/local/mysql/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
    ```
 
 Mysql Cmake options 说明文档：[https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html](https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html)
