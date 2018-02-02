@@ -11,7 +11,7 @@
 
 ## Python
 
-* [Test](python/tets.md)
+* [Django使用](python/tets.md)
 
 ## Mysql
 
