@@ -4,17 +4,17 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
 
 的安装.
 
-* **Nginx安装**
+**Nginx安装**
 
-  ```
-  wget http://nginx.org/download/nginx-1.12.2.tar.gz  #获取源码包
-  tar -zxvf nginx-1.12.2.tar.gz && cd nginx-1.12.2
-  yum install gcc openssl openssl-devel pcre pcre-devel -y  && useradd -M -s /sbin/nologin www
-  ./configure --prefix=/usr/local/nginx --user=www --group=www --with-file-aio --with-http_ssl_module --with-http_v2_module --with-http_realip_module  --with-http_stub_status_module    --with-pcre
-  make && make install
-  chown -R www.www /usr/local/nginx
-  /usr/local/nginx/sbin/nginx   # 启动Nginx服务
-  ```
+```
+wget http://nginx.org/download/nginx-1.12.2.tar.gz  #获取源码包
+tar -zxvf nginx-1.12.2.tar.gz && cd nginx-1.12.2
+yum install gcc openssl openssl-devel pcre pcre-devel -y  && useradd -M -s /sbin/nologin www
+./configure --prefix=/usr/local/nginx --user=www --group=www --with-file-aio --with-http_ssl_module --with-http_v2_module --with-http_realip_module  --with-http_stub_status_module    --with-pcre
+make && make install
+chown -R www.www /usr/local/nginx
+/usr/local/nginx/sbin/nginx   # 启动Nginx服务
+```
 
 **Mysql安装**
 
@@ -76,12 +76,10 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
  Mysql Cmake options 说明文档：https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html
 ```
 
-
-
 ##### 3. **Php安装**
 
 ```
-Mysql Cmake options 说明文档：[https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.htm
+  wget 
 ```
 
 
