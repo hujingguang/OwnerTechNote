@@ -15,7 +15,7 @@ Mysql配置文件参数说明
          back_log=1200             #达到最大连接数时允许进入等待队列的连接,超过则直接拒绝客户端连接
          innodb_file_per_table = 1  #开启innodb存储引擎每个表单独文件存储
          default-storage-engine=InnoDB  #默认存储引擎为innodb
-         
+
 
          #日志配置
          log_bin=/usr/local/mysql/logs/mysql-bin   #二进制日志文件路径
@@ -26,8 +26,8 @@ Mysql配置文件参数说明
          long_query_time=1          #慢日志记录时间,为1表示超过1s的查询记录到慢日志文件
          slow_query_log_file=/usr/local/mysql/logs/slow.log   #慢日志文件路径
          expire_logs_days=7         #日志文件过期时间,为7表示只保留七天内的日志文件
-         
-         
+
+
          #主从配置参数
          log-slave-updates=1   #开启从relay_log同步数据的时候同时写入binlog中,用于ABC复制模型
          skip_slave_start=1    #关闭启动服务时自动启动start slave  从库配置此参数
@@ -42,15 +42,14 @@ Mysql配置文件参数说明
          relay-log-info-repository=TABLE  #中继日志信息以表格形式存储
          sync-master-info=1  #当master-info-repository=TABLE,开启则会更新master info信息,否则不更新
          sync_relay_log=1  #开启刷新relay log 事件
-         
-         
-         
-         
+         replicate-ignore-db = mysql   #忽略mysql库的更新语句到从库
+
+
+
+
          #GTID复制模式
          gtid-mode=on    #开启GTID复制模式,
          enforce-gtid-consistency=true    #强制支持GTID复制模式,当个别语句不支持时无法执行
-
-         
 ```
 
 
