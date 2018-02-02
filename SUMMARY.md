@@ -15,7 +15,7 @@
 
 ## Mysql
 
-* [my.cnf配置参数说明](mysql/mycnfpei-zhi-can-shu-shuo-ming.md)
+* [my.cnf配置说明](mysql/mycnfpei-zhi-can-shu-shuo-ming.md)
 
 ## Doc
 
