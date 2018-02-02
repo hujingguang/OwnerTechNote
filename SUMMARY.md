@@ -15,6 +15,8 @@
 
 ## Mysql
 
+* [my.cnf配置参数说明](mysql/mycnfpei-zhi-can-shu-shuo-ming.md)
+
 ## Doc
 
 * [Jenkins插件](doc/jenkinscha-jian.md)
