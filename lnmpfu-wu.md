@@ -79,7 +79,7 @@ chown -R www.www /usr/local/nginx
 ##### 3. **Php安装**
 
 ```
-  wget 
+  wget  
 ```
 
 
