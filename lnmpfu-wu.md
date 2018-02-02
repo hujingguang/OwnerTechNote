@@ -56,29 +56,21 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
    sort_buffer_size = 2M
    read_rnd_buffer_size = 2M
    sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
+
+
+
+
+   cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld 
+   sed -i 's#database=#database=/usr/local/mysql/data#g' /etc/init.d/mysqld
+   sed -i 's#basedir=#basedir=/usr/local/mysql#' /etc/init.d/mysqld
+   chmod +x /etc/init.d/mysqld 
+   mkdir /usr/local/mysql/{var,logs}
+   chown -R mysql.mysql /usr/local/mysql
+   cd /usr/local/mysql && ./scripts/mysql_install_db --user=mysql --defaults-file=/usr/local/mysql/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
+
    ```
 
-```
-    
-```
-
-```
-
-```
-
-```
-cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld 
-sed -i 's#database=#database=/usr/local/mysql/data#g' /etc/init.d/mysqld
-sed -i 's#basedir=#basedir=/usr/local/mysql#' /etc/init.d/mysqld
-chmod +x /etc/init.d/mysqld 
-mkdir /usr/local/mysql/{var,logs}
-chown -R mysql.mysql /usr/local/mysql
-cd /usr/local/mysql && ./scripts/mysql_install_db --user=mysql --defaults-file=/usr/local/mysql/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data
-```
-
-\`\`\`
-
-Mysql Cmake options 说明文档：[https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.htm](https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html)
+     Mysql Cmake options 说明文档：[https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.htm](https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html)
 
 ##### 3. **Php安装**
 
