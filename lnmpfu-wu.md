@@ -16,61 +16,56 @@ LNMP \(Linux , Nginx,PHP,Mysql\),互联网web服务后台通用基础架构的�
    /usr/local/nginx/sbin/nginx   # 启动Nginx服务
    ```
 
-2. Mysql安装
+2. Mysql安装  
+            yum install ncurses-devel zlib-devel perl-DBI perl-DBD-mysql perl-Time-HiRes perl-IO-Socket-SSL perl-Term-ReadKey cmake -y  
+           wget [http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz](http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz)  
+           tar -zxvf mysql-5.6.38.tar.gz  && cd mysql-5.6.38   
+           useradd -M -s /sbin/nologin mysql  
+          cmake -DCMAKE\_INSTALL\_PREFIX=/usr/local/mysql -DSYSCONFDIR=/usr/local/mysql/my.cnf -DMYSQL\_DATADIR=/usr/local/mysql/data -DWITH\_INNOBASE\_STORAGE\_ENGINE=1 -DWITH\_MEMORY\_STORAGE\_ENGINE=1 -DWITH\_MYISAM\_STORAGE\_ENGINE=1 -DWITH\_ARCHIVE\_STORAGE\_ENGINE=1 -DWITH\_READLINE=1 -DENABLED\_LOCAL\_INFILE=1 -DDEFAULT\_CHARSET=utf8 -DDEFAULT\_COLLATION=utf8\_general\_ci -DEXTRA\_CHARSET=utf8 -DWITH\_USER=mysql -DWITH\_EMBEDDED\_SERVER=OFF  
+        make && make install  
+        vim /usr/local/mysql/my.cnf   \#配置mysql配置文件
 
    ```
-        yum install ncurses-devel zlib-devel perl-DBI perl-DBD-mysql perl-Time-HiRes perl-IO-Socket-SSL perl-Term-ReadKey cmake -y
-        wget http://ftp.ntu.edu.tw/MySQL/Downloads/MySQL-5.6/mysql-5.6.38.tar.gz
-        tar -zxvf mysql-5.6.38.tar.gz  && cd mysql-5.6.38 
-        useradd -M -s /sbin/nologin mysql
-        cmake -DCMAKE_INSTALL_PREFIX=/usr/local/mysql -DSYSCONFDIR=/usr/local/mysql/my.cnf -DMYSQL_DATADIR=/usr/local/mysql/data -DWITH_INNOBASE_STORAGE_ENGINE=1 -DWITH_MEMORY_STORAGE_ENGINE=1 -DWITH_MYISAM_STORAGE_ENGINE=1 -DWITH_ARCHIVE_STORAGE_ENGINE=1 -DWITH_READLINE=1 -DENABLED_LOCAL_INFILE=1 -DDEFAULT_CHARSET=utf8 -DDEFAULT_COLLATION=utf8_general_ci -DEXTRA_CHARSET=utf8 -DWITH_USER=mysql -DWITH_EMBEDDED_SERVER=OFF
-        make && make install
-        vim /usr/local/mysql/my.cnf   #配置mysql配置文件
+         innodb_buffer_pool_size = 128M
+         basedir = /usr/local/mysql
+         datadir = /usr/local/mysql/data
+         port = 3306
+         server_id = 1
+         pid-file=/usr/local/mysql/var/mysql.pid
+         user=mysql
+         #bind-address=192.168.10.238
+         skip-name-resolve
+         back_log=1200
+         max_connections=2000
+         transaction_isolation = REPEATABLE-READ
+         log_bin=/usr/local/mysql/logs/mysql-bin
+         binlog_format=row
+         max_binlog_size = 2G
+         gtid-mode=on
+         enforce-gtid-consistency=true 
+         binlog-rows-query-log_events=1
+         log-slave-updates=1  
+         skip_slave_start=1  
+         expire_logs_days=7
+         log_error=/usr/local/mysql/var/error.log
+         slow_query_log=1
+         long_query_time=1
+         slow_query_log_file=/usr/local/mysql/logs/slow.log
+         innodb_file_per_table = 1
+         default-storage-engine=InnoDB
+         join_buffer_size = 128M
+         sort_buffer_size = 2M
+         read_rnd_buffer_size = 2M 
+         sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
 
-             innodb_buffer_pool_size = 128M
-             basedir = /usr/local/mysql
-             datadir = /usr/local/mysql/data
-             port = 3306
-             server_id = 1
-             pid-file=/usr/local/mysql/var/mysql.pid
-             user=mysql
-             #bind-address=192.168.10.238
-             skip-name-resolve
-             back_log=1200
-             max_connections=2000
-             transaction_isolation = REPEATABLE-READ
-             log_bin=/usr/local/mysql/logs/mysql-bin
-             binlog_format=row
-             max_binlog_size = 2G
-             gtid-mode=on
-             enforce-gtid-consistency=true 
-             binlog-rows-query-log_events=1
-             log-slave-updates=1  
-             skip_slave_start=1  
-             expire_logs_days=7
-             log_error=/usr/local/mysql/var/error.log
-             slow_query_log=1
-             long_query_time=1
-             slow_query_log_file=/usr/local/mysql/logs/slow.log
-             innodb_file_per_table = 1
-             default-storage-engine=InnoDB
-             join_buffer_size = 128M
-             sort_buffer_size = 2M
-             read_rnd_buffer_size = 2M 
-             sql_mode=NO_ENGINE_SUBSTITUTION,STRICT_TRANS_TABLES
-          
-        cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld 
-        sed -i 's#database=#database=/usr/local/mysql/data#g' /etc/init.d/mysqld
-        sed -i 's#basedir=#basedir=/usr/local/mysql#' /etc/init.d/mysqld
-        chmod +x /etc/init.d/mysqld 
-        mkdir /usr/local/mysql/{var,logs}
-        chown -R mysql.mysql /usr/local/mysql
-        cd /usr/local/mysql && ./scripts/mysql_install_db --user=mysql --defaults-file=/usr/local/mysql/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data 
-     
-     
+    cp /usr/local/mysql/support-files/mysql.server /etc/init.d/mysqld 
+    sed -i 's#database=#database=/usr/local/mysql/data#g' /etc/init.d/mysqld
+    sed -i 's#basedir=#basedir=/usr/local/mysql#' /etc/init.d/mysqld
+    chmod +x /etc/init.d/mysqld 
+    mkdir /usr/local/mysql/{var,logs}
+    chown -R mysql.mysql /usr/local/mysql
+    cd /usr/local/mysql && ./scripts/mysql_install_db --user=mysql --defaults-file=/usr/local/mysql/my.cnf --basedir=/usr/local/mysql --datadir=/usr/local/mysql/data 
    ```
 
-   Mysql Cmake options 说明文档：[https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html](https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html)
-
-
+Mysql Cmake options 说明文档：[https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html](https://dev.mysql.com/doc/refman/5.6/en/source-configuration-options.html)
 
