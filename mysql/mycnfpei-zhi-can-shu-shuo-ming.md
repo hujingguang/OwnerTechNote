@@ -50,6 +50,20 @@ Mysql配置文件参数说明
          #GTID复制模式
          gtid-mode=on    #开启GTID复制模式,
          enforce-gtid-consistency=true    #强制支持GTID复制模式,当个别语句不支持时无法执行
+         
+         
+         #优化配置参数
+         
+          thread_concurrency=8   #为cpu核数的2倍
+          key_buffer_size=2G     #全局缓存大小
+          innodb_buffer_pool_size=8G #对innodb引擎影响很大的一个参数,根据机器内存配置
+          innodb_additional_mem_pool_size=20M #数据库对象比较多时调大该参数
+          innodb_log_buffer_size=20M  #不建议超过32M
+          query_cache_size=512M     #查询缓存大小
+          read_buffer_size=16M 
+          sort_buffer_size=16M
+          thread_cache_size=64   #线程缓存数大小
+          join_buffer_size = 512M  #连表查询缓存大小
 ```
 
 
