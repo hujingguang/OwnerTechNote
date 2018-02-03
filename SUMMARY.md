@@ -20,4 +20,5 @@
 ## Doc
 
 * [Jenkins插件](doc/jenkinscha-jian.md)
+* [实用Tools](doc/shi-yong-tools.md)
 
