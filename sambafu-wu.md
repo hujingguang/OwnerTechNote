@@ -26,7 +26,7 @@ yum install samba-common samba  samba-client tdb-tools -y
     max log size = 50
     security = user
     passdb backend = tdbsam
-
+    directory mask = 775
     [public]
       comment = 公共资源
       path = /data/samba/public
@@ -110,7 +110,5 @@ vim  /etc/samba/smb.d/%U.smb.conf
      new_passwd=456456 中的456456为新密码
    ```
 
-
-
-Github Address: https://github.com/hujingguang/tech\_note
+Github Address: [https://github.com/hujingguang/tech\_note](https://github.com/hujingguang/tech_note)
 
