@@ -64,9 +64,9 @@ yum install redis -y   #
   5. /usr/local/logstash-shipper/bin/logstash -f /usr/local/logstash-shipper/log.conf  #启动服务
 
   #配置logstash-indexer
-  
+
   6. vim /usr/local/logstash-indexer/redis.conf
-  
+
       input{
         redis{
        data_type => "pattern_channel"
@@ -75,7 +75,7 @@ yum install redis -y   #
        port => 6379
              }
        }
-       
+
        output{
           elasticsearch {
          hosts => ["127.0.0.1:9200"]    #elasticsearch 监听地址端口
@@ -91,16 +91,15 @@ yum install redis -y   #
    }
 
 }
-  
+
   7. vim  /usr/local/logstash-indexer/config/logstash.yml
-    
+
       xpack.monitoring.elasticsearch.url: "http://127.0.0.1:9200"
       xpack.monitoring.elasticsearch.username: "logstash_system"    #安装elasticsearch时生成再填写
       xpack.monitoring.elasticsearch.password: "123123"
-  
+
   8. cd /usr/local/logstash-indexer  && ./bin/logstash-plugin install x-pack #安装x-pack插件
-  
 ```
 
-
+安装Elasticsearch6.2.2
 
