@@ -101,5 +101,9 @@ yum install redis -y   #
   8. cd /usr/local/logstash-indexer  && ./bin/logstash-plugin install x-pack #安装x-pack插件
 ```
 
-安装Elasticsearch6.2.2
+##### 安装Elasticsearch6.2.2
+
+    wget 
+
+
 
