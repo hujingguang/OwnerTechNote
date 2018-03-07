@@ -4,13 +4,26 @@ ELK ,全名Elasticsearch, Logstash, Kibana ,是一套日志实时处理系统。
 
 ###### 安装JDK
 
-   ........
-
-
+........
 
 ##### 安装Logstash6.2.2
 
-     此处Logstash 有两个实例，一个为Shipper,一个Indexer。 Shipper用来处理日志文件然后输出到Redis，Indexer用来从Redis取出日志发送给ElasticSearch存储。
+  此处Logstash 有两个实例，一个为Shipper,一个Indexer。 Shipper用来处理日志文件然后输出到Redis，Indexer用来从Redis取出日志发送给ElasticSearch存储。
 
-          wget 
+```
+此处Logstash 有两个实例，一个为Shipper,一个Indexer。 Shipper用来处理日志文件然后输出到Redis，Indexer用来从Redis取出日志发送给ElasticSearch存储。
+```
+
+```
+
+
+```
+
+```
+ 此处Logstash 有两个实例，一个为Shipper,一个Indexer。 Shipper用来处理日志文件然后输出到Redis，Indexer用来从Redis取出日志发送给ElasticSearch存储。
+
+      wget 
+```
+
+
 
