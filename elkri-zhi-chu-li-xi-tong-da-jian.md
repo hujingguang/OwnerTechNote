@@ -142,5 +142,5 @@ yum install redis -y   #
 
 ##### 安装Kibana6.2.2
 
-
+      1. wget 
 
