@@ -60,12 +60,17 @@ yum install redis -y   #
                }
       }
     }
-
-  5. /usr/local/logstash-shipper/bin/logstash -f /usr/local/logstash-shipper/log.conf  #启动服务
+  5. cd /usr/local/logstash-shipper && ./bin/logstash-plugin install logstash-input-redis 
+   
+  6. cd /usr/local/logstash-shipper && ./bin/logstash-plugin install logstash-patterns-core
+  
+  7. cd /usr/local/logstash-indexer && ./bin/logstash-plugin install logstash-input-redis 
+  
+  8. /usr/local/logstash-shipper/bin/logstash -f /usr/local/logstash-shipper/log.conf  #启动服务
 
   #配置logstash-indexer
 
-  6. vim /usr/local/logstash-indexer/redis.conf
+  9. vim /usr/local/logstash-indexer/redis.conf
 
       input{
         redis{
@@ -92,18 +97,32 @@ yum install redis -y   #
 
 }
 
-  7. vim  /usr/local/logstash-indexer/config/logstash.yml
+  10. vim  /usr/local/logstash-indexer/config/logstash.yml
 
       xpack.monitoring.elasticsearch.url: "http://127.0.0.1:9200"
       xpack.monitoring.elasticsearch.username: "logstash_system"    #安装elasticsearch时生成再填写
       xpack.monitoring.elasticsearch.password: "123123"
 
-  8. cd /usr/local/logstash-indexer  && ./bin/logstash-plugin install x-pack #安装x-pack插件
+  11. cd /usr/local/logstash-indexer  && ./bin/logstash-plugin install x-pack #安装x-pack插件
+  
+  
 ```
 
 ##### 安装Elasticsearch6.2.2
 
-    wget 
+```
+ 1.  wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.zip
+ 
+ 2.  unzip elasticsearch-6.2.2.zip && cp -a elasticsearch-6.2.2  /usr/local/elasticsearch
+ 
+ 3. mkdir /usr/local/elasticsearch/data
+ 
+ 4. useradd elastic && chown -R elastic.elastic /usr/local/elasticsearch
+ 
+ 5. vim /usr/local/elasticsearch/config/
+ 
+ 
+```
 
 
 
