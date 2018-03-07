@@ -61,11 +61,11 @@ yum install redis -y   #
       }
     }
   5. cd /usr/local/logstash-shipper && ./bin/logstash-plugin install logstash-input-redis 
-   
+
   6. cd /usr/local/logstash-shipper && ./bin/logstash-plugin install logstash-patterns-core
-  
+
   7. cd /usr/local/logstash-indexer && ./bin/logstash-plugin install logstash-input-redis 
-  
+
   8. /usr/local/logstash-shipper/bin/logstash -f /usr/local/logstash-shipper/log.conf  #启动服务
 
   #配置logstash-indexer
@@ -104,24 +104,40 @@ yum install redis -y   #
       xpack.monitoring.elasticsearch.password: "123123"
 
   11. cd /usr/local/logstash-indexer  && ./bin/logstash-plugin install x-pack #安装x-pack插件
-  
-  
 ```
 
 ##### 安装Elasticsearch6.2.2
 
 ```
  1.  wget https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-6.2.2.zip
- 
+
  2.  unzip elasticsearch-6.2.2.zip && cp -a elasticsearch-6.2.2  /usr/local/elasticsearch
- 
+
  3. mkdir /usr/local/elasticsearch/data
- 
+
  4. useradd elastic && chown -R elastic.elastic /usr/local/elasticsearch
+
+ 5. vim /usr/local/elasticsearch/config/elasticsearch.yml
  
- 5. vim /usr/local/elasticsearch/config/
- 
- 
+     network.host: 0.0.0.0
+     action.auto_create_index: true
+     http.cors.enabled: true
+     http.cors.allow-origin: "*"
+     http.cors.allow-headers: "Authorization"
+     xpack.security.audit.enabled: true
+     bootstrap.memory_lock: false
+     bootstrap.system_call_filter: false
+     
+  6. su - elastic && cd /usr/local/elasticsearch && ./bin/elasticsearch-plugin install x-pack
+  
+  7. vim /etc/profile
+      
+       ulimit -n 65536
+       ulimit -u 4096
+       
+  8. su - elastic && cd /usr/local/elasticsearch && ./bin/x-pack/setup-passwords interactive #此处生成logstash_system,elastic,kibana三个用户的密码，分别用来填写安装Logstash,Kibana时配置文件中的用户和密码
+  
+  9  su - elastic && cd /usr/local/elasticsearch && ./bin/elasticsearch   #启动服务，若无报错加 -d 选项作为守护进程启动
 ```
 
 
