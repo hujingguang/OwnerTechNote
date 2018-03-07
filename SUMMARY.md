@@ -8,6 +8,7 @@
 * [OpenVPN服务](openvpnfu-wu.md)
 * [Samba服务](sambafu-wu.md)
 * [LNMP服务](lnmpfu-wu.md)
+* [ELK日志服务](elkri-zhi-chu-li-xi-tong-da-jian.md)
 
 ## Python
 
