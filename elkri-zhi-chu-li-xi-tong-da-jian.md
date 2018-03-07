@@ -142,7 +142,22 @@ yum install redis -y   #
 
 ##### 安装Kibana6.2.2
 
-        wget 
+```
+  1. wget  https://artifacts.elastic.co/downloads/kibana/kibana-6.2.2-linux-x86_64.tar.gz
+  
+  2. tar -zxvf kibana-6.2.2-linux-x86_64.tar.gz && mv kibana-6.2.2-linux-x86_64 /usr/local/kibana
+  
+  3. cd /usr/local/kibana && ./bin/kibana-plugin install x-pack
+  
+  4.  vim /usr/local/kibana/config/kibana.yml
+  
+         server.host: "0.0.0.0"
+         elasticsearch.url: "http://127.0.0.1:9200"
+         elasticsearch.username: "kibana"
+         elasticsearch.password: "123123"         #此处填写安装elasticsearch 时第八步生成的kibana用户名和密码
+         logging.useUTC: false
+  5.  cd /usr/local/kibana && ./bin/kibana   #启动服务
+```
 
 
 
