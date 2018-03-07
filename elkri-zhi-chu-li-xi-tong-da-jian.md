@@ -118,7 +118,7 @@ yum install redis -y   #
  4. useradd elastic && chown -R elastic.elastic /usr/local/elasticsearch
 
  5. vim /usr/local/elasticsearch/config/elasticsearch.yml
- 
+
      network.host: 0.0.0.0
      action.auto_create_index: true
      http.cors.enabled: true
@@ -127,18 +127,20 @@ yum install redis -y   #
      xpack.security.audit.enabled: true
      bootstrap.memory_lock: false
      bootstrap.system_call_filter: false
-     
+
   6. su - elastic && cd /usr/local/elasticsearch && ./bin/elasticsearch-plugin install x-pack
-  
+
   7. vim /etc/profile
-      
+
        ulimit -n 65536
        ulimit -u 4096
-       
+
   8. su - elastic && cd /usr/local/elasticsearch && ./bin/x-pack/setup-passwords interactive #此处生成logstash_system,elastic,kibana三个用户的密码，分别用来填写安装Logstash,Kibana时配置文件中的用户和密码
-  
+
   9  su - elastic && cd /usr/local/elasticsearch && ./bin/elasticsearch   #启动服务，若无报错加 -d 选项作为守护进程启动
 ```
+
+##### 安装Kibana6.2.2
 
 
 
