@@ -9,7 +9,7 @@
         "theme":"sepia",
         "family":"sans",
         "size":1
-       }
+       },
        "toc2": {
             "addClass": true,
             "className": "toc"
