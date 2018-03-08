@@ -4,6 +4,6 @@ pluginsConfig: {
         "theme":"sepia",
         "family":"serif",
         "size":1
-    }
+       }
     }
 }
