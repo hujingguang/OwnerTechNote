@@ -1,5 +1,5 @@
 {
-pluginsConfig: {
+pluginsConfig:{
    "fontsettings":{
         "theme":"sepia",
         "family":"serif",
