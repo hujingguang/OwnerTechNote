@@ -1,5 +1,9 @@
 {
 "title": "Tech Note Book",
+"author": "Hoover",
+"plugins": [
+ "disqus",
+],
 "pluginsConfig":{
    "fontsettings":{
         "theme":"sepia",
