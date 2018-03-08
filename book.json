@@ -2,7 +2,8 @@
 "title": "Tech Note Book",
 "author": "Hoover",
 "plugins": [
- "disqus"
+ "disqus",
+ "splitter"
 ],
 "pluginsConfig":{
    "fontsettings":{
