@@ -16,8 +16,6 @@ TrueCrypt:           磁盘加密工具
 
 [http://www.liaoxuefeng.com ](http://www.liaoxuefeng.com)
 
-
-
 #### **Linux学习网站**
 
 
