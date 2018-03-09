@@ -14,3 +14,9 @@ TrueCrypt:           磁盘加密工具
 
 
 
+#### **Python学习网站**
+
+ [http://www.liaoxuefeng.com ](http://www.liaoxuefeng.com)
+
+
+
