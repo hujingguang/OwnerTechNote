@@ -20,3 +20,11 @@ TrueCrypt:           磁盘加密工具
 
 
 
+#### **Ansible Doc**
+
+[http://www.ansible.com.cn](http://www.ansible.com.cn)
+
+[http://docs.ansible.com/ansible/latest/index.html](http://docs.ansible.com/ansible/latest/index.html)
+
+
+
