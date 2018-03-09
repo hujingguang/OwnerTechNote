@@ -12,11 +12,13 @@ Soureinsight:      源代码阅读工具
 
 TrueCrypt:           磁盘加密工具
 
-
-
 #### **Python学习网站**
 
- [http://www.liaoxuefeng.com ](http://www.liaoxuefeng.com)
+[http://www.liaoxuefeng.com ](http://www.liaoxuefeng.com)
+
+
+
+#### **Linux学习网站**
 
 
 
