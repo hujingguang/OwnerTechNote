@@ -2,7 +2,6 @@
 "title": "Tech Note Book",
 "author": "Hoover",
 "plugins": [
- "toc2"
 ],
 "pluginsConfig":{
    "fontsettings":{
