@@ -236,7 +236,59 @@ output{
 
 ###### **多个日志文件处理 logstash -indexer配置如下**
 
-    helloworld
+```
+input{
+    redis{
+       data_type => "pattern_channel"
+       key => "nginx-chan"
+       host => "192.168.10.201"
+       port => 6379
+     }
+    redis{
+       data_type => "pattern_channel"
+       key => "cnt-cdt-api-access-chan"
+       host => "192.168.10.201"
+       port => 6379
+     }
+    redis{
+       data_type => "pattern_channel"
+       key => "cnt-cdt-api-error-chan"
+       host => "192.168.10.201"
+       port => 6379
+     }
+}
+output{
+    if [type] == "cnt_cdt_api_access" {
+      elasticsearch {
+         hosts => ["127.0.0.1:9200"]
+         index => "cnt-cdt-api-access-chan-%{+yyyy.MM.dd}"
+         template_overwrite => true
+         manage_template => false
+         user => "elastic"
+         password => "123123"
+         codec => json
+         }
+    stdout{
+     codec => rubydebug
+   }
+   }
+  if [type] == "cnt_cdt_api_error" {
+        elasticsearch {
+         hosts => ["127.0.0.1:9200"]
+         index => "cnt-cdt-api-error-chan-%{+yyyy.MM.dd}"
+         template_overwrite => true
+         manage_template => false
+         user => "elastic"
+         password => "123123"
+         codec => json
+         } 
+         stdout{
+               codec => rubydebug
+   }
+           }
+
+}
+```
 
 
 
