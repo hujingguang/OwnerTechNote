@@ -159,11 +159,80 @@ yum install redis -y   #
   5.  cd /usr/local/kibana && ./bin/kibana   #启动服务
 ```
 
+###### **附： 多个日志文件处理 logstash 配置如下**
+
+```
+    input{ 
+   file{
+    path => "/data/cnt_cdt_api/logs/access.log"
+    start_position => "beginning"
+    type => 'cnt_cdt_api_access'
+  }
+  file{
+      path => "/data/cnt_cdt_api/logs/error.log"
+      type => 'cnt_cdt_api_error'
+      codec => multiline{
+            pattern => "^201"
+            negate => true
+            what => "previous"              #处理tomcat日志中包含多行的处理
+            }
+      start_position => "beginning"
+    }
+}
+filter{ 
+     if [type] == "cnt_cdt_api_access"{
+       grok{
+        match => {
+          "message" => "%{MYDATE:log_date} %{DATA:number} \[%{LOGLEVEL:level}\] %{DATA:position} %{DATA:thread} %{GREEDYDATA:info}"
+      }
+       remove_field => ["@version","host","message"]
+       add_field => {
+            "host_name" => "ld-vm-247"
+            "application" => "cnt_cdt_api"
+          } 
+     }
+   }
+    if [type] == "cnt_cdt_api_error"{
+          grok{
+            match => {
+                   "message" => "%{MYDATE:log_date} %{DATA:number} \[%{LOGLEVEL:level}\] %{DATA:position} %{DATA:thread} %{GREEDYDATA:info}"
+                     }
+            remove_field => ["@version","host","message","tags"]
+            add_field => {
+                 "host_name" => "ld-vm-247"
+                 "application" => "cnt_cdt_api"
+                }
+            }
+       }
+}
+
+output{
+       if "_grokparsefailure" not in [tags]{
+         if [type] == "cnt_cdt_api_access"{
+                 redis{
+                    data_type => "channel"
+                    key => "cnt-cdt-api-access-chan"
+                    host => "192.168.10.201"
+                    port => 6379
+                 }
+                stdout{
+                  codec => rubydebug
+               }
+            }
+         if [type] == "cnt_cdt_api_error"{
+                 redis{
+                    data_type => "channel"
+                    key => "cnt-cdt-api-error-chan"
+                    host => "192.168.10.201"
+                    port => 6379
+                 }
+                stdout{
+                  codec => rubydebug
+               }
+            }
+      }
+}
+```
 
 
-
-
-附： 多个日志文件处理 logstash 配置如下
-
-        hello world
 
