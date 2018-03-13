@@ -159,7 +159,7 @@ yum install redis -y   #
   5.  cd /usr/local/kibana && ./bin/kibana   #启动服务
 ```
 
-###### **附： 多个日志文件处理 logstash 配置如下**
+###### **附： 多个日志文件处理 logstash -shipper 配置如下**
 
 ```
     input{ 
@@ -233,6 +233,10 @@ output{
       }
 }
 ```
+
+###### **多个日志文件处理 logstash -indexer配置如下**
+
+    helloworld
 
 
 
