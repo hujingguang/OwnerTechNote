@@ -162,7 +162,34 @@ yum install redis -y   #
 ##### **激活X-pack**
 
 ```
-    浏览器打开  https://register.elastic.co/xpack_register   获取basic license 
+    浏览器打开  https://register.elastic.co/xpack_register   获取basic license
+    
+    vim   t.sh    #将获取的license信息依次填入相应的key中。
+    
+    
+    curl -XPOST 'http://elastic:123123@192.168.10.201:9200/_xpack/license?pretty&acknowledge=true' -H 'Content-Type: application/json' -d'
+{
+  "licenses": [
+    {
+      "uid":"8e7c12d3-3980-4167-aefa-73da676e06fb",
+      "type":"basic",
+      "start_date_in_millis": 1520985600000,
+      "issue_date_in_millis":1520985600000,
+      "expiry_date_in_millis":1552607999999,
+      "max_nodes":100,
+      "issued_to":"xxxxx",
+      "issuer":"Web Form",
+      "signature":"xxxxxxx"
+    }
+    ]
+}
+'
+   bash  ./t.sh   
+    #执行脚本，返回 
+     {
+   "acknowledged" : true,
+    "license_status" : "valid"
+     } 表示激活成功
 ```
 
 ###### 
