@@ -161,7 +161,9 @@ yum install redis -y   #
 
 ##### **激活X-pack**
 
-    helloworld
+```
+    浏览器打开  https://register.elastic.co/xpack_register   获取basic license 
+```
 
 ###### 
 
