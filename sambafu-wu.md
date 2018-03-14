@@ -110,5 +110,5 @@ vim  /etc/samba/smb.d/%U.smb.conf
      new_passwd=456456 中的456456为新密码
    ```
 
-Github Address: [https://github.com/hujingguang/tech\_note](https://github.com/hujingguang/tech_note)
+
 
