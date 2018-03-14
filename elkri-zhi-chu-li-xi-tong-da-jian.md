@@ -159,6 +159,20 @@ yum install redis -y   #
   5.  cd /usr/local/kibana && ./bin/kibana   #启动服务
 ```
 
+##### **激活X-pack**
+
+    helloworld
+
+###### 
+
+###### 
+
+###### 
+
+###### 
+
+###### 
+
 ###### **附： 多个日志文件处理 logstash -shipper 配置如下**
 
 ```
