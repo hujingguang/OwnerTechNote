@@ -10,11 +10,7 @@ centos6.x , mysql5.6 , zabbix3.4, php5.6
 
 安装PHP5.6  Mysql Server Nginx 请参照 [LNMP服务](/lnmpfu-wu.md) 章节
 
-
-
 #### zabbix安装
 
-
-
-
+     wget  https://cfhcable.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/3.4.7/zabbix-3.4.7.tar.gz
 
