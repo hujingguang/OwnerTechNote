@@ -130,10 +130,13 @@ yum install redis -y   #
 
   6. su - elastic && cd /usr/local/elasticsearch && ./bin/elasticsearch-plugin install x-pack
 
-  7. vim /etc/profile
+  7. vim /etc/profile  #添加如下内容
 
        ulimit -n 65536
        ulimit -u 4096
+       
+     vim /etc/sysctl.conf   #添加如下内容
+        vm.max_map_count=655360
 
   8. su - elastic && cd /usr/local/elasticsearch && ./bin/x-pack/setup-passwords interactive #此处生成logstash_system,elastic,kibana三个用户的密码，分别用来填写安装Logstash,Kibana时配置文件中的用户和密码
 
@@ -163,10 +166,10 @@ yum install redis -y   #
 
 ```
     浏览器打开  https://register.elastic.co/xpack_register   获取basic license
-    
+
     vim   t.sh    #将获取的license信息依次填入相应的key中。
-    
-    
+
+
     curl -XPOST 'http://elastic:123123@192.168.10.201:9200/_xpack/license?pretty&acknowledge=true' -H 'Content-Type: application/json' -d'
 {
   "licenses": [
