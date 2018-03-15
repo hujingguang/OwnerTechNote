@@ -79,7 +79,9 @@ chown -R www.www /usr/local/nginx
 ##### 3. **Php安装**
 
 ```
-  wget  
+  获取php5.6源码  https://pan.baidu.com/s/10dBALKbuJ5KQeafJU7feBQ
+  
+  yum install gcc gcc-c++ cmake make openldap openldap-devel  libxslt libsxlt-devel  libxslt-devel gd-devel libxml2-devel curl-devel libpng-devel libjpeg-turbo-devel freetype-devel libmcrypt-devel libmcrypt php-mbstring mhash-devel libcurl-devel pcre-devel openssl-devel ncurses-devel bison-devel zlib-devel mysql-server
 ```
 
 
