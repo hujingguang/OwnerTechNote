@@ -80,9 +80,17 @@ chown -R www.www /usr/local/nginx
 
 ```
   获取php5.6源码  https://pan.baidu.com/s/10dBALKbuJ5KQeafJU7feBQ
+
+  yum install gcc gcc-c++ cmake make openldap openldap-devel  libxslt libsxlt-devel  libxslt-devel gd-devel libxml2-devel curl-devel libpng-devel libjpeg-turbo-devel freetype-devel libmcrypt-devel libmcrypt php-mbstring mhash-devel libcurl-devel pcre-devel openssl-devel ncurses-devel bison-devel zlib-devel 
   
-  yum install gcc gcc-c++ cmake make openldap openldap-devel  libxslt libsxlt-devel  libxslt-devel gd-devel libxml2-devel curl-devel libpng-devel libjpeg-turbo-devel freetype-devel libmcrypt-devel libmcrypt php-mbstring mhash-devel libcurl-devel pcre-devel openssl-devel ncurses-devel bison-devel zlib-devel mysql-server
+  tar -xzxf php-5.6.16.tar.gz && cd php-5.6.16 
+  
+  cp -frp /usr/lib64/libldap* /usr/lib/ && ./configure  --with-fpm-user=www --with-fpm-group=www   --with-openssl --enable-fpm --with-mysql --with-mysqli --with-freetype-dir --with-jpeg-dir --with-png-dir --with-zlib --with-libxml-dir=shared --enable-xml --with-curl --with-mhash --with-mcrypt --with-gd --enable-gd-native-ttf --with-xsl --with-ldap --with-ldap-sasl --without-pear --enable-zip --enable-soap --enable-mbstring --enable-sockets --enable-pcntl --enable-bcmath --enable-shmop --enable-sysvsem --enable-inline-optimization --disable-rpath --enable-mbregex --with-xmlrpc --enable-wddx --enable-ftp --prefix=/usr/local/php5.6
+  
+  make && make install
 ```
+
+
 
 
 
