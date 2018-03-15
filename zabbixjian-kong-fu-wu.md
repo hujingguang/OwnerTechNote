@@ -14,12 +14,27 @@ centos6.x , mysql5.6 , zabbix3.4, php5.6
 
 ```
  wget  https://cfhcable.dl.sourceforge.net/project/zabbix/ZABBIX%20Latest%20Stable/3.4.7/zabbix-3.4.7.tar.gz
- 
+
  tar -zxvf zabbix-3.4.7.tar.gz && cd zabbix-3.4.7
- 
+
  yum install net-snmp-devel OpenIPMI OpenIPMI-devel libevent libevent-devel mysql mysql-devel -y 
 
-./configure  --prefix=/usr/local/zabbix --enable-server  --enable-agent  --with-mysql=/usr/local/mysql/bin/mysql_config --with-libxml2  --with-net-snmp --with-openipmi  --with-openssl --enable-ipv6  --with-libcurl
+ ./configure  --prefix=/usr/local/zabbix --enable-server  --enable-agent  --with-mysql=/usr/local/mysql/bin/mysql_config --with-libxml2  --with-net-snmp --with-openipmi  --with-openssl --enable-ipv6  --with-libcurl
+
+ ln -s /usr/local/mysql/lib/libmysqlclient.so.18 /usr/lib64/
+ 
+ useradd -M -s /sbin/nologin zabbix
+ 
+ cd /root/zabbix-3.4.7 && cp misc/init.d/fedora/core/zabbix_agentd /etc/init.d/ && cp misc/init.d/fedora/core/zabbix_server /etc/init.d/
+ 
+ sed -i 's#BASEDIR=/usr/local# BASEDIR=/usr/local/zabbix#/g' /etc/init.d/zabbix_agentd 
+ 
+ sed -i 's#BASEDIR=/usr/local# BASEDIR=/usr/local/zabbix#/g' /etc/init.d/zabbix_server
+ 
+
+
+
+
 ```
 
 
