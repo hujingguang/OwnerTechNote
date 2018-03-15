@@ -4,3 +4,11 @@ zabbix是一款企业级分布式监控软件,集成图表展示,报警,分布�
 
 监控解决方案。以下是基于zabbix3.4部署文档。
 
+##### requirements
+
+  centos6.x , mysql5.6 , zabbix3.4,php5.6
+
+
+
+
+
