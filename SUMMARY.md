@@ -9,6 +9,7 @@
 * [Samba服务](sambafu-wu.md)
 * [LNMP服务](lnmpfu-wu.md)
 * [ELK日志服务](elkri-zhi-chu-li-xi-tong-da-jian.md)
+* Zabbix监控服务
 
 ## Python
 
