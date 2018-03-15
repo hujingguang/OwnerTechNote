@@ -22,19 +22,25 @@ centos6.x , mysql5.6 , zabbix3.4, php5.6
  ./configure  --prefix=/usr/local/zabbix --enable-server  --enable-agent  --with-mysql=/usr/local/mysql/bin/mysql_config --with-libxml2  --with-net-snmp --with-openipmi  --with-openssl --enable-ipv6  --with-libcurl
 
  ln -s /usr/local/mysql/lib/libmysqlclient.so.18 /usr/lib64/
- 
+
  useradd -M -s /sbin/nologin zabbix
- 
+
  cd /root/zabbix-3.4.7 && cp misc/init.d/fedora/core/zabbix_agentd /etc/init.d/ && cp misc/init.d/fedora/core/zabbix_server /etc/init.d/
- 
+
  sed -i 's#BASEDIR=/usr/local# BASEDIR=/usr/local/zabbix#/g' /etc/init.d/zabbix_agentd 
- 
+
  sed -i 's#BASEDIR=/usr/local# BASEDIR=/usr/local/zabbix#/g' /etc/init.d/zabbix_server
  
-
-
-
-
+ vim /usr/local/php/lib/php.ini
+ 
+    post_max_size = 16M
+    always_populate_raw_post_data = -1
+    default_socket_timeout = 60
+    date.timezone = "Asia/Shanghai"
+    
+ 
+ 
+ 
 ```
 
 
