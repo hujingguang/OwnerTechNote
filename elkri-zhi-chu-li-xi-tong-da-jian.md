@@ -50,7 +50,7 @@ yum install redis -y   #
      output{
        if "_grokparsefailure" not in [tags]{
                  redis{
-                    data_type => "channel"
+                    data_type => "list"
                     key => "nginx-chan"
                     host => "127.0.0.1"
                     port => 6379
@@ -74,7 +74,7 @@ yum install redis -y   #
 
       input{
         redis{
-       data_type => "pattern_channel"
+       data_type => "list"
        key => "nginx-chan"  
        host => "127.0.0.1"
        port => 6379
