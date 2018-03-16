@@ -220,7 +220,9 @@ yum install redis -y   #
        bash  input_license.sh
 ```
 
-###### 
+##### **ElasticSearch集群配置**
+
+        
 
 ###### **附： 多个日志文件处理 logstash -shipper 配置如下**
 
