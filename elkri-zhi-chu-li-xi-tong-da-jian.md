@@ -201,22 +201,22 @@ yum install redis -y   #
 
 ```
        下载破解版 x-pack-core.jar包和激活license脚本
-       
+
        x-pack-core.jar 地址： https://pan.baidu.com/s/1k8q8U1_i1sgq9ZtjL2SyDQ
-       
+
        license脚本地址： https://pan.baidu.com/s/1_sws0vovuDU6zloNTrjHQg
-       
-       
+
+
        将下载的jar包替换 /usr/local/elasticsearch/plugin/x-pack/x-pack-core/x-pack-core-6.2.2.jar
-       
+
        修改 /usr/local/elasticsearch/config/elasticsearch.yml
-       
+
           xpack.security.enabled: false  #修改为false
-          
+
        重启 elasticsearch
-       
+
        执行下载的license脚本(修改里面的地址为你自己的elastic监听地址)
-        
+
        bash  input_license.sh
 ```
 
@@ -273,7 +273,7 @@ output{
        if "_grokparsefailure" not in [tags]{
          if [type] == "cnt_cdt_api_access"{
                  redis{
-                    data_type => "channel"
+                    data_type => "list"
                     key => "cnt-cdt-api-access-chan"
                     host => "192.168.10.201"
                     port => 6379
@@ -284,7 +284,7 @@ output{
             }
          if [type] == "cnt_cdt_api_error"{
                  redis{
-                    data_type => "channel"
+                    data_type => "list"
                     key => "cnt-cdt-api-error-chan"
                     host => "192.168.10.201"
                     port => 6379
@@ -302,19 +302,19 @@ output{
 ```
 input{
     redis{
-       data_type => "pattern_channel"
+       data_type => "list"
        key => "nginx-chan"
        host => "192.168.10.201"
        port => 6379
      }
     redis{
-       data_type => "pattern_channel"
+       data_type => "list"
        key => "cnt-cdt-api-access-chan"
        host => "192.168.10.201"
        port => 6379
      }
     redis{
-       data_type => "pattern_channel"
+       data_type => "list"
        key => "cnt-cdt-api-error-chan"
        host => "192.168.10.201"
        port => 6379
