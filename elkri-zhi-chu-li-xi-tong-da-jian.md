@@ -199,7 +199,7 @@ yum install redis -y   #
 
 ##### 破解x-pack
 
-      
+           下载破解版
 
 ###### 
 
