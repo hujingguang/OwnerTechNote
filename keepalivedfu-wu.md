@@ -6,11 +6,9 @@ keepavlied两个功能：1.使用VRRP协议进行failover，2.检查LVS system �
 
 ![](/assets/Z@K606~D[D8WRFYLDP{6FMA.png)
 
+###### 架构图如下
 
-
-######                                                             架构图如下
-
-                                                                        ![](/assets/]P8ID5O50EG%28J[C[QN`[F18.png)
+![](/assets/]P8ID5O50EG%28J[C[QN`[F18.png)
 
 
 
