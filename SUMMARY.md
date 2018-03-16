@@ -10,6 +10,7 @@
 * [LNMP服务](lnmpfu-wu.md)
 * [ELK日志服务](elkri-zhi-chu-li-xi-tong-da-jian.md)
 * [Zabbix监控服务](zabbixjian-kong-fu-wu.md)
+* [Keepalived服务](keepalivedfu-wu.md)
 
 ## Python
 
