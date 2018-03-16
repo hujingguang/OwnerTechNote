@@ -137,9 +137,9 @@ yum install redis -y   #
 
      vim /etc/sysctl.conf   #添加如下内容
         vm.max_map_count=655360
-        
+
      执行sysctl -p 使其生效
-     
+
   8. su - elastic && cd /usr/local/elasticsearch && ./bin/x-pack/setup-passwords interactive #此处生成logstash_system,elastic,kibana三个用户的密码，分别用来填写安装Logstash,Kibana时配置文件中的用户和密码
 
   9  su - elastic && cd /usr/local/elasticsearch && ./bin/elasticsearch   #启动服务，若无报错加 -d 选项作为守护进程启动
@@ -199,9 +199,9 @@ yum install redis -y   #
 
 ###### 
 
-###### 
+##### 破解x-pack
 
-###### 
+######        瞎咋
 
 ###### 
 
