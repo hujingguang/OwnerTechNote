@@ -222,7 +222,7 @@ yum install redis -y   #
 
 ##### **ElasticSearch集群配置**
 
-        
+          ddd
 
 ###### **附： 多个日志文件处理 logstash -shipper 配置如下**
 
