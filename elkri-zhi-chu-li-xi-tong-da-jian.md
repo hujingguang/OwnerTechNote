@@ -273,9 +273,9 @@ xpack.security.authc.realms:
 
     #/usr/local/1-elasticsearch/config/mapping.yml 配置如下：
         kibana_user:
-          - "cn=hjg,ou=users,dc=laidiantech,dc=com"
+          - "cn=hjg,ou=users,dc=your_domain,dc=com"
         tomcat_log_role:
-         - "cn=hjg,ou=users,dc=laidiantech,dc=com"
+         - "cn=hjg,ou=users,dc=your_domian,dc=com"
 
 
 
