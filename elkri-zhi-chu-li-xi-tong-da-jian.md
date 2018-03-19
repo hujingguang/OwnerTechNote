@@ -260,7 +260,7 @@ xpack.security.authc.realms:
     order: 0
     url: "ldap://ldldap.yourIP.com"
    # bind_dn: "cn=admin,dc=domain,dc=com"
-   # bind_password: HSCJT3wtbv
+   # bind_password: your_password
     user_dn_templates:
       - "cn={0}, ou=users,dc=domain, dc=com"
     group_search:
