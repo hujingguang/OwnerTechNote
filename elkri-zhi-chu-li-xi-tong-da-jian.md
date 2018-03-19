@@ -220,20 +220,20 @@ yum install redis -y   #
        bash  input_license.sh
 ```
 
-##### **ElasticSearch集群配置**
+##### **ElasticSearch集群配置 + LDAP认证**
 
 ```
       用破解的x-pack-core-6.2.2.jar替换elastic集群中x-pack 未破解的jar,license不用在其他数据节点再次激活了
-      
+
       cd /usr/local/elasticsearch/   && ./bin/x-pack/certgen   #生成公私密钥，需要连续生成所有节点的
-      
+
       修改jdk
-      
+
       vim /usr/local/jdk1.8/jre/lib/security/java.policy  添加一行
          permission java.io.FilePermission "<<ALL FILES>>", "read";
-         
+
       Master  节点(192.168.10.201)配置文件如下：  
-        
+----------------------------------------------------------------------------------------------
 network.host: 0.0.0.0
 http.port: 9200
 bootstrap.memory_lock: false
@@ -254,10 +254,36 @@ node.max_local_storage_nodes: 2
 xpack.ssl.key: /tmp/test/node201/node201.key
 xpack.ssl.certificate: /tmp/test/node201/node201.crt
 xpack.ssl.certificate_authorities: /tmp/test/ca/ca.crt
+xpack.security.authc.realms:
+  ldap1:
+    type: ldap
+    order: 0
+    url: "ldap://ldldap.yourIP.com"
+   # bind_dn: "cn=admin,dc=domain,dc=com"
+   # bind_password: HSCJT3wtbv
+    user_dn_templates:
+      - "cn={0}, ou=users,dc=domain, dc=com"
+    group_search:
+      base_dn: "dc=domain,dc=com"
+    files:
+      role_mapping: "/usr/local/1-elasticsearch/config/mapping.yml"
+    unmapped_groups_as_roles: false
 
-     Slave 数据节点(192.168.10.199)配置文件如下：  
-   
-   
+-----------------------------------------------------------------------------------
+
+    #/usr/local/1-elasticsearch/config/mapping.yml 配置如下：
+        kibana_user:
+          - "cn=hjg,ou=users,dc=laidiantech,dc=com"
+        tomcat_log_role:
+         - "cn=hjg,ou=users,dc=laidiantech,dc=com"
+
+
+
+-----------------------------------------------------------------------------------------------
+
+ Slave 数据节点(192.168.10.199)配置文件如下：  
+
+
 cluster.name: my-application
 node.name: node-199
 node.master: false
@@ -278,9 +304,6 @@ xpack.ssl.key: /tmp/test/node199/node199.key
 xpack.ssl.certificate: /tmp/test/node199/node199.crt
 xpack.ssl.certificate_authorities: /tmp/test/ca/ca.crt
 xpack.security.transport.ssl.enabled: true
-
-
-         
 ```
 
 ###### **附： 多个日志文件处理 logstash -shipper 配置如下**
