@@ -254,6 +254,7 @@ node.max_local_storage_nodes: 2
 xpack.ssl.key: /tmp/test/node201/node201.key
 xpack.ssl.certificate: /tmp/test/node201/node201.crt
 xpack.ssl.certificate_authorities: /tmp/test/ca/ca.crt
+#openldap认证配置
 xpack.security.authc.realms:
   ldap1:
     type: ldap
@@ -277,7 +278,19 @@ xpack.security.authc.realms:
         tomcat_log_role:
          - "cn=hjg,ou=users,dc=your_domian,dc=com"
 
-
+#告警邮件配置
+xpack.notification.email.account:
+  outlook_account: 
+    profile: outlook
+    email_defaults: 
+      from: <laidiantech@outlook.com>
+    smtp: 
+      auth: true
+      starttls.enable: true
+      host: smtp-mail.outlook.com
+      port: 587
+      user: laidiantech@outlook.com
+      password: your_password
 
 -----------------------------------------------------------------------------------------------
 
