@@ -450,9 +450,5 @@ output{
 }
 ```
 
-###### SaltStack 一键部署logstash客户端脚本下载地址：
-
-[https://pan.baidu.com/s/1VDEvCuawJQAyjAcuhiejGw](https://pan.baidu.com/s/1VDEvCuawJQAyjAcuhiejGw)
-
 
 
