@@ -1,7 +1,7 @@
 #### 冒 泡 排 序
 
 ```
-  def maopao():
+  def bulle_sort():
     List=[4,9,10,8,11,3,2]
     for i in range(0,len(List)-1):
         j=0
