@@ -16,8 +16,6 @@
 
 * [Django使用](python/tets.md)
 * [经典算法Python实现](python/jing-dian-suan-fa-python-shi-xian.md)
-  * [冒泡排序](python/jing-dian-suan-fa-python-shi-xian/mao-pao-pai-xu.md)
-  * [二分法排序](python/jing-dian-suan-fa-python-shi-xian/er-fen-fa-pai-xu.md)
 
 ## Mysql
 
