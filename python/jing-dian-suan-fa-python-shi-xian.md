@@ -8,7 +8,7 @@
         while j<len(List)-1:
             if List[j] > List[j+1]:
                 List[j+1],List[j]=List[j],List[j+1]
-		print List
+            print List
             j=j+1
     print List
 ```
