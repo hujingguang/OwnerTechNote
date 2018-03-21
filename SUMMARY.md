@@ -29,4 +29,5 @@
 ## Life
 
 * [旧文拾遗](life/jiu-wen-shi-yi.md)
+* [诗词吾爱](life/shi-ci-wu-ai.md)
 
