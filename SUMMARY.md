@@ -33,4 +33,5 @@
 * [必读经典](life/li-bai-san-wen.md)
 * [现代诗歌](life/xian-dai-shi-ge.md)
   * [席慕容精选](life/xian-dai-shi-ge/xi-mu-rong-xuan-ji.md)
+  * [徐志摩精选](life/xian-dai-shi-ge/xu-zhi-mo-jing-xuan.md)
 
