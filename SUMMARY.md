@@ -36,4 +36,5 @@
   * [徐志摩精选](life/xian-dai-shi-ge/xu-zhi-mo-jing-xuan.md)
   * [海子精选](life/xian-dai-shi-ge/hai-zi-jing-xuan.md)
   * [泰戈尔精选](life/xian-dai-shi-ge/tai-ge-er-jing-xuan.md)
+  * [短诗精选](life/xian-dai-shi-ge/duan-shi-jing-xuan.md)
 
