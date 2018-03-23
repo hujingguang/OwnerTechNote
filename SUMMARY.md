@@ -34,4 +34,5 @@
 * [现代诗歌](life/xian-dai-shi-ge.md)
   * [席慕容精选](life/xian-dai-shi-ge/xi-mu-rong-xuan-ji.md)
   * [徐志摩精选](life/xian-dai-shi-ge/xu-zhi-mo-jing-xuan.md)
+  * [海子精选](life/xian-dai-shi-ge/hai-zi-jing-xuan.md)
 
