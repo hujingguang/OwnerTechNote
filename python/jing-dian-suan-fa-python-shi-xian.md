@@ -33,8 +33,7 @@
   def f():
      List=[4,10,2,11,3,10,1,19,3]
      for i in range(0,len(List)-1):
-        min_index=i
-        n=n+1
+        min_index=in=n+1
         for j in range(i+1,len(List)):
            if List[j]<List[min_index]:
            min_index=j
