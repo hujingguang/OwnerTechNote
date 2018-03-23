@@ -31,4 +31,5 @@
 * [旧文拾遗](life/jiu-wen-shi-yi.md)
 * [诗词吾爱](life/shi-ci-wu-ai.md)
 * [必读经典](life/li-bai-san-wen.md)
+* [现代诗歌](life/xian-dai-shi-ge.md)
 
