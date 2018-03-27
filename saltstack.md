@@ -4,3 +4,5 @@
 
 centos下安装: yum install salt salt-master salt-minion -y
 
+---------------------------------------
+
