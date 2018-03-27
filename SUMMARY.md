@@ -17,7 +17,7 @@
 
 * [Tornado](python/tornado.md)
 * [Django](python/tets.md)
-* [经典算法Python实现](python/jing-dian-suan-fa-python-shi-xian.md)
+* [经典排序算法](python/jing-dian-suan-fa-python-shi-xian.md)
 
 ## Mysql
 
