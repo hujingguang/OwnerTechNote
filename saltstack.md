@@ -4,5 +4,11 @@
 
 安装: yum install salt salt-master salt-minion -y
 
-----------------------------
+---
+
+#### SLS文件范列
+
+1.  Logstash客户端sls编写范列
+
+                 dddd
 
