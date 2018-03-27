@@ -30,6 +30,17 @@
 
     proto字段: 修饰符描述id 所属的协议
        可选的协议有: ether, fddi, tr, wlan, ip, ip6, arp, rarp, decnet, tcp以及 upd.
+       
+       
+ 适用范列
+ 
+     1.过滤tcp sync包
+       
+        tcpdump -i x01 -nnp port 80 and ' tcp[13]&2 == 2 '
+        
+     2. 过滤http协议包
+     
+        tcpdump  -XvvennSs 0 -i eth0 tcp[20:2]=0x4745 or tcp[20:2]=0x4854   x4745 为"GET"前两个字母"GE",0x4854 为"HTTP"前两个字母"HT"
 ```
 
 
