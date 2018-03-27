@@ -8,6 +8,8 @@ centos下安装: yum install salt salt-master salt-minion -y
 
 中文手册文档: [http://docs.saltstack.cn/](http://docs.saltstack.cn/)
 
+各种服务sls文件地址: [https://github.com/hujingguang/OpsSystem/tree/master/sls](https://github.com/hujingguang/OpsSystem/tree/master/sls)
+
 ---
 
 #### SLS文件语法
