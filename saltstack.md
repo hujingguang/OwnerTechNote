@@ -4,5 +4,15 @@
 
 centos下安装: yum install salt salt-master salt-minion -y
 
----------------------------------------
+---
+
+#### SLS文件语法
+
+ Logstash客户端sls编写范列
+
+    helloworld
+
+
+
+
 
