@@ -12,6 +12,7 @@
 * [Zabbix监控服务](zabbixjian-kong-fu-wu.md)
 * [Keepalived服务](keepalivedfu-wu.md)
 * [TCP/IP&tcpdump](tcpipji-tcpdump-shi-yong.md)
+* [SaltStack](saltstack.md)
 
 ## Python
 
