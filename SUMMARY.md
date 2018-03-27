@@ -16,7 +16,7 @@
 ## Python
 
 * [Tornado](python/tornado.md)
-* [Django使用](python/tets.md)
+* [Django](python/tets.md)
 * [经典算法Python实现](python/jing-dian-suan-fa-python-shi-xian.md)
 
 ## Mysql

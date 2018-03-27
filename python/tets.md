@@ -4,16 +4,12 @@
 安装
 
      pip  install django
-     
 
 Sync数据库表
 
     python manage.py makemigrations
-    
-    python manage.py migrate
-    
-    
 
+    python manage.py migrate
 
 
 部署Nginx + uwsgi
@@ -21,7 +17,7 @@ Sync数据库表
    pip install uwsgi
 
    vim start.ini
-   
+
     [uwsgi]
     chdir= your_project_path
     module=ops_system.wsgi:application
@@ -31,17 +27,13 @@ Sync数据库表
     daemonize=/tmp/project.log
     socket=127.0.0.1:9999
     master=True
-    
-    
+------------------------------------------------------------
     vim  nginx.conf
-    
+
      location / {
           uwsgi_pass 127.0.0.1:9999;
           include uwsgi_params;
         }
-
-
-
 ```
 
 
