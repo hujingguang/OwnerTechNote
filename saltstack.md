@@ -4,6 +4,10 @@
 
 centos下安装: yum install salt salt-master salt-minion -y
 
+官方英文文档: [https://docs.saltstack.com/en/latest/](https://docs.saltstack.com/en/latest/)
+
+中文手册文档: [http://docs.saltstack.cn/](http://docs.saltstack.cn/)
+
 ---
 
 #### SLS文件语法
@@ -68,5 +72,5 @@ add_monit_logstash:
     - unless: test -e /etc/monit.d/logstash.conf
 ```
 
-  
+
 
