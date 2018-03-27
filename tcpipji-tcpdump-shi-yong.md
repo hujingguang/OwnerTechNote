@@ -12,5 +12,7 @@
 
 #### tcpdump命令使用
 
+       type
+
 
 
