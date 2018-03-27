@@ -8,11 +8,9 @@ centos下安装: yum install salt salt-master salt-minion -y
 
 #### SLS文件语法
 
-Logstash客户端sls编写范列
+1. Logstash客户端安装sls编写范列
 
 ```
-
-
 {%set logstash_dir= '/usr/local/logstash' %}
 
 mkdir_logstash:
@@ -45,7 +43,6 @@ upload_conf:
     - source: salt://logstash/files/log.conf
     - unless: test -e {{logstash_dir}}/log.conf
 
-
 add_regex:
   file.append:
     - name: {{logstash_dir}}/vendor/bundle/jruby/2.3.0/gems/logstash-patterns-core-4.1.2/patterns/grok-patterns
@@ -69,10 +66,7 @@ add_monit_logstash:
     - source: salt://logstash/files/monit_logstash
     - name: /etc/monit.d/logstash.conf
     - unless: test -e /etc/monit.d/logstash.conf
-
-
-
 ```
 
-
+  
 
