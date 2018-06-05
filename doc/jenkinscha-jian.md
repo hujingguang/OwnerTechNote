@@ -152,13 +152,9 @@ Jenkins的Master-Slave架构实现了分布式构建，可以充分的横向扩�
   [https://plugins.jenkins.io/backup](https://plugins.jenkins.io/backup)
   ，这个插件添加备份功能到Jenkins management
 
+### Company Plugin
+
+     sss
 
 
-
-
-
-
-
-
-Company Plugin
 
