@@ -28,11 +28,12 @@ zookeeper集群运行至少需要两台机器，以下将使用三台机器搭�
           server.2=192.168.10.194:2888:3888
           server.3=192.168.10.195:2888:3888
    5. mkdir /usr/local/zookeeper/data && echo 1 > /usr/local/zookeeper/data/myid  #
-   
-   6.  scp -r /usr/local/zookeeper 192.168.10.194:/usr/local/  #登录194 修改/usr/local/zookeeper内容为2
-   
-   7. scp -r /usr/local/zookeeper 192.168.10.195:/usr/local/  #登录195 修改/usr/local/zookeeper内容为 3
 
+   6.  scp -r /usr/local/zookeeper 192.168.10.194:/usr/local/  #登录194 修改/usr/local/zookeeper内容为2
+
+   7. scp -r /usr/local/zookeeper 192.168.10.195:/usr/local/  #登录195 修改/usr/local/zookeeper内容为 3
+   
+   8. /etc/init.d/iptables stop  #关闭防火墙。
 ```
 
 
