@@ -13,6 +13,7 @@
 * [Keepalived服务](keepalivedfu-wu.md)
 * [TCP/IP&tcpdump](tcpipji-tcpdump-shi-yong.md)
 * [SaltStack](saltstack.md)
+* [Zookeeper集群搭建](zookeeperji-qun-da-jian.md)
 
 ## Python
 
