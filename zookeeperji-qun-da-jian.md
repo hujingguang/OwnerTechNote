@@ -57,13 +57,13 @@ zookeeper集群运行至少需要两台机器，以下将使用三台机器搭�
 ##### zookeeper脚本说明
 
 ```
- ./bin/zkCleanup.sh   #清理zookeeper历史数据 -包括事务日志文件和快照数据文件
- 
- ./bin/zkCli.sh   # zookeeper的简易客户端通过这个客户端可以对zookeeper服务端数据进行各种操作 接远程机器可以执行./zkCli.sh  -server  ip:port
- 
- ./bin/zkEnv.sh  # 设置zookeeper启动时的环境变量   这个脚本不要单独执行,它需要嵌入到zkServer.sh或者其他脚本中使用
- 
- ./bin/zkServer.sh # zookeeper服务器的启动停止重启和状态查询
+./bin/zkCleanup.sh   #清理zookeeper历史数据 -包括事务日志文件和快照数据文件
+
+./bin/zkCli.sh  #zookeeper的简易客户端通过这个客户端可以对zookeeper服务端数据进行各种操作 接远程机器可以执行./zkCli.sh -server ip:port
+
+./bin/zkEnv.sh  # 设置zookeeper启动时的环境变量   这个脚本不要单独执行,它需要嵌入到zkServer.sh或者其他脚本中使用
+
+./bin/zkServer.sh # zookeeper服务器的启动停止重启和状态查询
 ```
 
 
