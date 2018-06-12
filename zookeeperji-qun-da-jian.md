@@ -36,13 +36,11 @@ zookeeper集群运行至少需要两台机器，以下将使用三台机器搭�
    8. /etc/init.d/iptables stop  #关闭防火墙。
 
    9. /usr/local/zookeeper/bin/zkServer.sh start #启动zookeeper服务
-   
+
    10. 登录其他两台机器，启动zookeeper服务
 ```
 
-
-
 ##### zookeeper集群状态
 
-
+![](/assets/1.png)
 
