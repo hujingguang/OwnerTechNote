@@ -12,21 +12,27 @@ zookeeper集群运行至少需要两台机器，以下将使用三台机器搭�
 
 ```
    1.  yum install java -y
-   
+
    2.  wget http://mirror.bit.edu.cn/apache/zookeeper/zookeeper-3.4.10/zookeeper-3.4.10.tar.gz
-   
+
    3.  tar -zxf zookeeper-3.4.10.tar.gz && mv zookeeper-3.4.10 /usr/local/zookeeper
-   
+
    4.  vim /usr/local/zookeeper/config/zoo.cfg
-   
+
           tickTime=2000
           initLimit=10
           syncLimit=5
           dataDir=/usr/local/zookeeper/data
           clientPort=2181
-          server.1=192.168.10.193:2888:3888
+          server.1=192.168.10.193:2888:3888  #对应相应的id，如service.1 此处的1为id
           server.2=192.168.10.194:2888:3888
           server.3=192.168.10.195:2888:3888
+   5. mkdir /usr/local/zookeeper/data && echo 1 > /usr/local/zookeeper/data/myid  #
+   
+   6.  scp -r /usr/local/zookeeper 192.168.10.194:/usr/local/  #登录194 修改/usr/local/zookeeper内容为2
+   
+   7. scp -r /usr/local/zookeeper 192.168.10.195:/usr/local/  #登录195 修改/usr/local/zookeeper内容为 3
+
 ```
 
 
