@@ -19,7 +19,7 @@ zookeeper集群运行至少需要两台机器，以下将使用三台机器搭�
 
    4.  vim /usr/local/zookeeper/config/zoo.cfg
 
-          tickTime=2000
+          tickTime=2000      #心跳间隔时间 2s
           initLimit=10
           syncLimit=5
           dataDir=/usr/local/zookeeper/data
