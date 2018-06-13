@@ -21,7 +21,7 @@ zookeeper集群运行至少需要两台机器，以下将使用三台机器搭�
 
           tickTime=2000      #心跳间隔时间 2s
           initLimit=10       #客户端连接超时时间 10*tickTime 
-          syncLimit=5
+          syncLimit=5        #Leader和Follower连接超时时间 5*tickTime
           dataDir=/usr/local/zookeeper/data
           clientPort=2181
           server.1=192.168.10.193:2888:3888  #对应相应的id，如service.1 此处的1为id
