@@ -18,13 +18,11 @@ TrueCrypt:           磁盘加密工具
 
 #### **Linux学习网站**
 
-
+[https://python.xiaoleilu.com/](https://python.xiaoleilu.com/)
 
 #### **Ansible Doc**
 
 [http://www.ansible.com.cn](http://www.ansible.com.cn)
 
 [http://docs.ansible.com/ansible/latest/index.html](http://docs.ansible.com/ansible/latest/index.html)
-
-
 
