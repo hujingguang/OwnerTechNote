@@ -18,8 +18,6 @@ TrueCrypt:           磁盘加密工具
 
 [https://wizardforcel.gitbooks.io/liaoxuefeng/content/](https://wizardforcel.gitbooks.io/liaoxuefeng/content/)
 
-
-
 #### **Linux学习网站**
 
 [https://python.xiaoleilu.com/](https://python.xiaoleilu.com/)
@@ -28,15 +26,19 @@ TrueCrypt:           磁盘加密工具
 
 [https://wizardforcel.gitbooks.io/nginx-doc/content/index.html](https://wizardforcel.gitbooks.io/nginx-doc/content/index.html)
 
+#### Django Doc
+
+[https://legacy.gitbook.com/book/wizardforcel/django-chinese-docs-18/details](https://legacy.gitbook.com/book/wizardforcel/django-chinese-docs-18/details)
+
 #### **Ansible Doc**
 
 [http://www.ansible.com.cn](http://www.ansible.com.cn)
 
 [http://docs.ansible.com/ansible/latest/index.html](http://docs.ansible.com/ansible/latest/index.html)
 
-
-
 #### Gitbook Search
 
 [https://legacy.gitbook.com/search](https://legacy.gitbook.com/search)
+
+
 
