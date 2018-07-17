@@ -16,6 +16,10 @@ TrueCrypt:           磁盘加密工具
 
 [http://www.liaoxuefeng.com ](http://www.liaoxuefeng.com)
 
+[https://wizardforcel.gitbooks.io/liaoxuefeng/content/](https://wizardforcel.gitbooks.io/liaoxuefeng/content/)
+
+
+
 #### **Linux学习网站**
 
 [https://python.xiaoleilu.com/](https://python.xiaoleilu.com/)
@@ -29,4 +33,10 @@ TrueCrypt:           磁盘加密工具
 [http://www.ansible.com.cn](http://www.ansible.com.cn)
 
 [http://docs.ansible.com/ansible/latest/index.html](http://docs.ansible.com/ansible/latest/index.html)
+
+
+
+#### Gitbook Search
+
+[https://legacy.gitbook.com/search](https://legacy.gitbook.com/search)
 
