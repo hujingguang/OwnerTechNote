@@ -20,6 +20,10 @@ TrueCrypt:           磁盘加密工具
 
 [https://python.xiaoleilu.com/](https://python.xiaoleilu.com/)
 
+#### Nginx**学习网站**
+
+[https://wizardforcel.gitbooks.io/nginx-doc/content/index.html](https://wizardforcel.gitbooks.io/nginx-doc/content/index.html)
+
 #### **Ansible Doc**
 
 [http://www.ansible.com.cn](http://www.ansible.com.cn)
