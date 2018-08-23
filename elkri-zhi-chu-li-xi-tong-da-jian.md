@@ -2,6 +2,10 @@
 
 ELK ,全名Elasticsearch, Logstash, Kibana ,是一套日志实时处理系统。官网：[https://www.elastic.co/webinars/introduction-elk-stack](https://www.elastic.co/webinars/introduction-elk-stack), 以下是基于 ELK v6.2.2 + redis + centos6.x + jdk1.8 +x-pack插件  搭建的日志处理服务.
 
+#### ELK架构图
+
+![](/assets/CatchFE66%2808-23-14-23-51%29.jpg)
+
 ###### 安装JDK
 
 ........
