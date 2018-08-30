@@ -4,7 +4,23 @@ ELK ,全名Elasticsearch, Logstash, Kibana ,是一套日志实时处理系统。
 
 #### ELK架构图
 
-![](/assets/CatchFE66%2808-23-14-23-51%29.jpg)
+#### ![](/assets/xxaxx.png)
+
+#### 当前集群系统配置
+
+Logstash Shipper:  运行内存最小1G
+
+Logstash-indexer:  实列数6个,运行内存1.5G.
+
+ElasticSearch :   运行内存3G, SSD磁盘, 8核8G以上配置
+
+系统主要瓶颈点在 Logstash-indexer和 ElasticSearch集群服务器磁盘IO,ElasticSearch集群服务器应选用SSD磁盘,增加Logstash-indexer实列数量。
+
+当前系统的吞吐量在每秒处理日志量1w+.磁盘IO使用率50%左右，系统负载90%,基本满足当前日志处理需求。后续如需要进一步提高吞吐量,则需要升级Elasticsearch集群配置和数量。
+
+
+
+
 
 ###### 安装JDK
 
