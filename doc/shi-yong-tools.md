@@ -40,5 +40,9 @@ TrueCrypt:           磁盘加密工具
 
 [https://legacy.gitbook.com/search](https://legacy.gitbook.com/search)
 
+#### K8s
+
+[https://k8s-install.opsnull.com/](https://k8s-install.opsnull.com/)
+
 
 
