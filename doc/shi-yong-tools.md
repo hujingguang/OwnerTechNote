@@ -18,6 +18,8 @@ TrueCrypt:           磁盘加密工具
 
 [https://wizardforcel.gitbooks.io/liaoxuefeng/content/](https://wizardforcel.gitbooks.io/liaoxuefeng/content/)
 
+[https://docs.python.org/2/library/index.html](https://docs.python.org/2/library/index.html)
+
 #### **Linux学习网站**
 
 [https://python.xiaoleilu.com/](https://python.xiaoleilu.com/)
@@ -43,6 +45,4 @@ TrueCrypt:           磁盘加密工具
 #### K8s
 
 [https://k8s-install.opsnull.com/](https://k8s-install.opsnull.com/)
-
-
 
