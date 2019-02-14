@@ -14,6 +14,7 @@
 * [TCP/IP&tcpdump](tcpipji-tcpdump-shi-yong.md)
 * [SaltStack](saltstack.md)
 * [Zookeeper集群](zookeeperji-qun-da-jian.md)
+* [Iptables 原理](iptables-yuan-li.md)
 
 ## Python
 
